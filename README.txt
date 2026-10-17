@@ -1,9 +1,13 @@
-Portfolio website package
+SIMPLIFIED PORTFOLIO COPY
 
-Open index.html to preview the portfolio. Upload the folder contents to your static website host while preserving the personal-project/ and images/ folders, since the portfolio includes a link to the separate MindSpace page.
+Open index.html in a browser to view the portfolio.
 
-Published profile information is read from the embedded site snapshot and is read-only through the portfolio interface. The owner-editing menu, profile editor, photo editor, import/export controls, and embedded source-package archive have been removed. The Dark mode control and portfolio navigation tabs remain.
+- Photos are in the images/ folder and linked from the HTML with ordinary file paths such as images/photo-01.jpg.
+- Long project descriptions show a short preview. Click the built-in “Read more” line to expand the full description; this uses native HTML details/summary and no extra JavaScript.
+- The profile cards are written directly in index.html instead of being rebuilt from a large hidden data block.
+- script.js handles navigation, dark mode, the shrinking header, and the browser-only notes, journal, and flashcard tools.
+- style.css preserves the original layout, responsive design, hover effects, and header transition, with small additional styling for the project-description previews.
 
-Sticky Notes, Journal, and Reviewer are browser-side mini-apps. Any changes visitors make there are stored only in that visitor's browser; they do not update the deployed website.
+Keep the images/ folder, style.css, script.js, and personal-project/ folder beside index.html when sharing or uploading the site. The personal-project folder is unchanged and contains the separate MindSpace app.
 
-For site-wide protection, secure your hosting account and deployment credentials (use a unique password and two-factor authentication). Removing the editor does not replace hosting-account security.
+The original ZIP was not changed; this is a separate simplified copy.
