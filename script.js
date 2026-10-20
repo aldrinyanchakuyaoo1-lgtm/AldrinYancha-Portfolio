@@ -40,6 +40,10 @@ function openTab(event, sectionName) {
   });
   document.getElementById(sectionName).classList.add("active");
   event.currentTarget.classList.add("active");
+  // Start every tab from the top with the full header, so a short tab never
+  // inherits a collapsed header from a long one.
+  document.getElementById("scrollContainer").scrollTop = 0;
+  document.querySelector(".header-container").classList.remove("compact");
 }
 
 // Switch between light and dark mode and remember the choice.
@@ -61,13 +65,58 @@ function toggleTheme() {
   localStorage.setItem("portfolio-theme", nextTheme);
 }
 
-// The CSS animates the header when this class is added or removed.
+// The CSS animates the header when the "compact" class is added or removed.
+//
+// Why this used to shake: the header sits ABOVE the scroll area, so shrinking
+// it makes the scroll area taller. On a short tab the extra height shrinks the
+// scrollable distance, the browser pushes scrollTop back under the trigger,
+// the header re-expands, and the loop repeats forever.
+// Fix: (1) two different thresholds (hysteresis) so it can't flip-flop, and
+// (2) never collapse unless there is enough content left to keep scrolling.
+const COLLAPSE_AT = 60; // collapse after scrolling past this many px
+const EXPAND_AT = 8; // expand again only when almost back at the top
+const SAFETY_ROOM = 40; // extra scroll room required after collapsing
+let headerDelta = 0; // how many px the header loses when it collapses
+let headerTicking = false;
+
+function measureHeaderDelta() {
+  const header = document.querySelector(".header-container");
+  if (!header) return;
+  const wasCompact = header.classList.contains("compact");
+  header.classList.add("no-transition");
+  header.classList.remove("compact");
+  const full = header.offsetHeight;
+  header.classList.add("compact");
+  const small = header.offsetHeight;
+  header.classList.toggle("compact", wasCompact);
+  header.offsetHeight; // apply the final state before transitions come back
+  header.classList.remove("no-transition");
+  headerDelta = Math.max(0, full - small);
+}
+
 function updateHeader() {
   const header = document.querySelector(".header-container");
   const content = document.getElementById("scrollContainer");
-  if (header && content) {
-    header.classList.toggle("compact", content.scrollTop > 48);
+  if (!header || !content) return;
+  const top = content.scrollTop;
+  const isCompact = header.classList.contains("compact");
+  if (isCompact) {
+    if (top < EXPAND_AT) header.classList.remove("compact");
+  } else if (top > COLLAPSE_AT) {
+    // Distance still scrollable once the scroll area grows by headerDelta.
+    const roomAfter = content.scrollHeight - content.clientHeight - headerDelta;
+    if (roomAfter > COLLAPSE_AT + SAFETY_ROOM) header.classList.add("compact");
   }
+}
+
+// Run at most once per frame instead of on every scroll event.
+function onContentScroll() {
+  if (headerTicking) return;
+  headerTicking = true;
+  requestAnimationFrame(function () {
+    headerTicking = false;
+    updateHeader();
+  });
 }
 
 // Add a sticky note, then redraw the list.
@@ -234,5 +283,12 @@ showDiaryEntries();
 showFlashcard();
 showFlashcardList();
 
-document.getElementById("scrollContainer").addEventListener("scroll", updateHeader);
-window.addEventListener("resize", updateHeader);
+document
+  .getElementById("scrollContainer")
+  .addEventListener("scroll", onContentScroll, { passive: true });
+window.addEventListener("resize", function () {
+  measureHeaderDelta();
+  updateHeader();
+});
+window.addEventListener("load", measureHeaderDelta);
+measureHeaderDelta();

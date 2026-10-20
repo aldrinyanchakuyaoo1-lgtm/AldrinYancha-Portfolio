@@ -3,17 +3,32 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta
+      content="width=device-width, initial-scale=1.0"
+      name="viewport"
+    />
     <title>PORTFOLIO</title>
-    <link href="https://fonts.googleapis.com" rel="preconnect" />
-    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+      href="https://fonts.googleapis.com"
+      rel="preconnect"
+    />
+    <link
+      crossorigin=""
+      href="https://fonts.gstatic.com"
+      rel="preconnect"
+    />
     <!-- Load the Plus Jakarta Sans font used by the portfolio. -->
     <link
       href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300..800"
       rel="stylesheet"
     />
-    <link href="style.css" rel="stylesheet" />
+
+    <link
+      href="style.css"
+      rel="stylesheet"
+    />
   </head>
+
   <body>
     <div class="my-box">
       <!-- PROFILE HEADER: cover image, profile photo, and profile name. -->
@@ -21,15 +36,17 @@
         <div
           class="cover-photo"
           id="coverPhoto"
-          style="
-            background-image: url(&quot;images/photo-01.jpg&quot;);
-            background-size: cover;
-          "
+          style="background-image: url(&quot;images/photo-01.jpg&quot;); background-size: cover"
         >
-          <div class="cover-placeholder" id="coverPlaceholder" style="display: none">
+          <div
+            class="cover-placeholder"
+            id="coverPlaceholder"
+            style="display: none"
+          >
             <span>▧</span>Cover photo
           </div>
         </div>
+
         <div class="workspace-toolbar">
           <button
             aria-label="Switch to dark mode"
@@ -42,22 +59,32 @@
             Dark mode
           </button>
         </div>
+
+        <!-- Profile Picture -->
         <div class="profile-section">
           <div class="profile-container">
             <div class="profile-frame">
+              <!-- Ito yung Blank Picture Kapag nawala yung mismong picture ko -->
               <svg
                 aria-label="Blank profile picture placeholder"
                 class="profile-placeholder"
                 id="profilePlaceholder"
                 style="display: none"
-                viewbox="0 0 100 100"
+                viewBox="0 0 100 100"
               >
-                <circle cx="50" cy="34" fill="currentColor" r="20"></circle>
+                <circle
+                  cx="50"
+                  cy="34"
+                  fill="currentColor"
+                  r="20"
+                ></circle>
+
                 <path
                   d="M13 92c2-23 17-36 37-36s35 13 37 36"
                   fill="currentColor"
                 ></path>
               </svg>
+
               <img
                 alt="Profile Picture"
                 class="profile-pic"
@@ -67,56 +94,102 @@
               />
             </div>
           </div>
+
           <div class="profile-info">
             <h2 id="profileName">Aldrin Pagangpang Yancha</h2>
             <p id="profileTagline">2nd Year &amp; ACT2-C</p>
           </div>
         </div>
+
         <!-- NAVIGATION: buttons open the portfolio pages and built-in mini-apps. -->
         <div class="nav-menu">
-          <button class="nav-btn" onclick="openTab(event, 'home')">Home</button>
-          <button class="nav-btn" onclick="openTab(event, 'about')">About Me</button>
-          <button class="nav-btn" onclick="openTab(event, 'skills')">My Skills</button>
-          <button class="nav-btn" onclick="openTab(event, 'projects')">
+          <button
+            class="nav-btn"
+            onclick="openTab(event, 'home')"
+          >
+            Home
+          </button>
+          <button
+            class="nav-btn"
+            onclick="openTab(event, 'about')"
+          >
+            About Me
+          </button>
+          <button
+            class="nav-btn"
+            onclick="openTab(event, 'skills')"
+          >
+            My Skills
+          </button>
+          <button
+            class="nav-btn"
+            onclick="openTab(event, 'projects')"
+          >
             My Projects
           </button>
-          <button class="nav-btn" onclick="openTab(event, 'achievements')">
+          <button
+            class="nav-btn"
+            onclick="openTab(event, 'achievements')"
+          >
             Achievements
           </button>
-          <button class="nav-btn" onclick="openTab(event, 'goals')">
+          <button
+            class="nav-btn"
+            onclick="openTab(event, 'goals')"
+          >
             Future Goals
           </button>
-          <button class="nav-btn active" onclick="openTab(event, 'contact')">
+          <button
+            class="nav-btn active"
+            onclick="openTab(event, 'contact')"
+          >
             Contact Me
           </button>
-          <button class="nav-btn" id="navNotes" onclick="openTab(event, 'notes')">
+          <button
+            class="nav-btn"
+            id="navNotes"
+            onclick="openTab(event, 'notes')"
+          >
             Sticky Notes
           </button>
-          <button class="nav-btn" id="navJournal" onclick="openTab(event, 'journal')">
+          <button
+            class="nav-btn"
+            id="navJournal"
+            onclick="openTab(event, 'journal')"
+          >
             Journal
           </button>
-          <button class="nav-btn" id="navReviewer" onclick="openTab(event, 'reviewer')">
+          <button
+            class="nav-btn"
+            id="navReviewer"
+            onclick="openTab(event, 'reviewer')"
+          >
             Reviewer
           </button>
         </div>
       </div>
+
       <!-- MAIN CONTENT: each tab has a separate preview container. -->
-      <div class="scroll-container" id="scrollContainer">
+      <div
+        class="scroll-container"
+        id="scrollContainer"
+      >
         <!-- HOME TAB -->
         <!-- HOME -->
-        <div class="tab-content content-section" id="home">
+        <div
+          class="tab-content content-section"
+          id="home"
+        >
           <h3>Welcome to My Portfolio</h3>
-          <div class="profile-details-grid grid-two-items" id="profilePreview-home">
-            <article
-              class="profile-preview-card manual-grid-card grid-size-half has-photo"
-            >
+
+          <div
+            class="profile-details-grid grid-two-items"
+            id="profilePreview-home"
+          >
+            <article class="profile-preview-card manual-grid-card grid-size-half has-photo">
               <div class="profile-preview-content">
                 <h4>Introduction</h4>
-                <p>
-                  "Welcome to my portfolio! I am an IT student with a strong passion for
-                  software programming, web development, and multimedia arts, dedicated
-                  to building engaging visual and digital experiences."
-                </p>
+                <p>"Welcome to my portfolio! I am an IT student with a strong passion for software programming, web development, and multimedia arts, dedicated to building engaging visual and digital experiences."</p>
               </div>
               <img
                 alt="Photo related to Introduction"
@@ -124,9 +197,8 @@
                 src="images/photo-03.jpg"
               />
             </article>
-            <article
-              class="profile-preview-card manual-grid-card grid-size-half has-photo"
-            >
+
+            <article class="profile-preview-card manual-grid-card grid-size-half has-photo">
               <div class="profile-preview-content">
                 <h4>Personal Tagline</h4>
                 <p>"Expressing Passion Through Code &amp; Creativity"</p>
@@ -139,31 +211,32 @@
             </article>
           </div>
         </div>
+
         <!-- ABOUT ME TAB -->
         <!-- ABOUT ME -->
-        <div class="tab-content content-section" id="about">
+        <div
+          class="tab-content content-section"
+          id="about"
+        >
           <h3>About Me</h3>
-          <div class="profile-details-grid grid-three-plus" id="profilePreview-about">
-            <article
-              class="profile-preview-card banner-card banner-photo-center has-photo"
-            >
+          <div
+            class="profile-details-grid grid-three-plus"
+            id="profilePreview-about"
+          >
+            <article class="profile-preview-card banner-card banner-photo-center has-photo">
               <div class="profile-preview-content">
                 <h4>About me</h4>
-                <p>
-                  I am Aldrin P. Yancha, 27 years old. I am an independent and
-                  introverted person who loves learning about technology and the arts. I
-                  enjoy exploring new knowledge in the fields of IT and digital media.
-                </p>
+                <p>I am Aldrin P. Yancha, 27 years old. I am an independent and introverted person who loves learning about technology and the arts. I enjoy exploring new knowledge in the fields of IT and digital media.</p>
               </div>
+
               <img
                 alt="Photo related to About me"
                 class="profile-card-image photo-shape-original"
                 src="images/photo-05.jpg"
               />
             </article>
-            <article
-              class="profile-preview-card manual-grid-card grid-size-half has-photo"
-            >
+
+            <article class="profile-preview-card manual-grid-card grid-size-half has-photo">
               <div class="profile-preview-content">
                 <h4>Course / Program</h4>
                 <p>Bachelor of Science in Information Technology (BSIT)</p>
@@ -174,9 +247,8 @@
                 src="images/photo-06.jpg"
               />
             </article>
-            <article
-              class="profile-preview-card manual-grid-card grid-size-half has-photo"
-            >
+
+            <article class="profile-preview-card manual-grid-card grid-size-half has-photo">
               <div class="profile-preview-content">
                 <h4>School</h4>
                 <p>Datamex College of Saint Adeline - Fairview</p>
@@ -187,6 +259,7 @@
                 src="images/photo-07.jpg"
               />
             </article>
+
             <article class="profile-preview-card grid-auto-third has-photo">
               <div class="profile-preview-content">
                 <h4>1. Hobby</h4>
@@ -198,6 +271,7 @@
                 src="images/photo-08.jpg"
               />
             </article>
+
             <article class="profile-preview-card grid-auto-third has-photo">
               <div class="profile-preview-content">
                 <h4>2. Hobby</h4>
@@ -209,6 +283,7 @@
                 src="images/photo-09.jpg"
               />
             </article>
+
             <article class="profile-preview-card grid-auto-third has-photo">
               <div class="profile-preview-content">
                 <h4>3. Hobby</h4>
@@ -220,6 +295,7 @@
                 src="images/photo-10.jpg"
               />
             </article>
+
             <article class="profile-preview-card grid-auto-third has-photo">
               <div class="profile-preview-content">
                 <h4>4. Hobby</h4>
@@ -231,6 +307,7 @@
                 src="images/photo-11.jpg"
               />
             </article>
+
             <article class="profile-preview-card grid-auto-third has-photo">
               <div class="profile-preview-content">
                 <h4>5. Hobby</h4>
@@ -286,9 +363,7 @@
                 src="images/photo-16.jpg"
               />
             </article>
-            <article
-              class="profile-preview-card grid-auto-third has-photo grid-last-half"
-            >
+            <article class="profile-preview-card grid-auto-third has-photo grid-last-half">
               <div class="profile-preview-content">
                 <h4>4. Interest</h4>
                 <p>Film Editing</p>
@@ -299,9 +374,7 @@
                 src="images/photo-17.jpg"
               />
             </article>
-            <article
-              class="profile-preview-card grid-auto-third has-photo grid-last-half"
-            >
+            <article class="profile-preview-card grid-auto-third has-photo grid-last-half">
               <div class="profile-preview-content">
                 <h4>5. Interest</h4>
                 <p>Photo Editing (Adobe Photoshop)</p>
@@ -312,9 +385,7 @@
                 src="images/photo-18.jpg"
               />
             </article>
-            <article
-              class="profile-preview-card manual-grid-card grid-size-half has-photo"
-            >
+            <article class="profile-preview-card manual-grid-card grid-size-half has-photo">
               <div class="profile-preview-content">
                 <h4>6. Interest</h4>
                 <p>Music Production</p>
@@ -325,9 +396,7 @@
                 src="images/photo-19.jpg"
               />
             </article>
-            <article
-              class="profile-preview-card manual-grid-card grid-size-half has-photo"
-            >
+            <article class="profile-preview-card manual-grid-card grid-size-half has-photo">
               <div class="profile-preview-content">
                 <h4>7. Interest</h4>
                 <p>Graphic Designer</p>
@@ -342,18 +411,19 @@
         </div>
         <!-- SKILLS TAB -->
         <!-- SKILLS -->
-        <div class="tab-content content-section" id="skills">
+        <div
+          class="tab-content content-section"
+          id="skills"
+        >
           <h3>My Skills</h3>
-          <div class="profile-details-grid grid-three-plus" id="profilePreview-skills">
-            <article
-              class="profile-preview-card manual-grid-card grid-size-half has-photo"
-            >
+          <div
+            class="profile-details-grid grid-three-plus"
+            id="profilePreview-skills"
+          >
+            <article class="profile-preview-card manual-grid-card grid-size-half has-photo">
               <div class="profile-preview-content">
                 <h4>Video Editing</h4>
-                <p>
-                  Proficient in editing high-quality videos, cinematic cuts, and
-                  engaging visual stories using Adobe Premiere Pro, CapCut, and Filmora.
-                </p>
+                <p>Proficient in editing high-quality videos, cinematic cuts, and engaging visual stories using Adobe Premiere Pro, CapCut, and Filmora.</p>
               </div>
               <img
                 alt="Photo related to Video Editing"
@@ -361,15 +431,10 @@
                 src="images/photo-17.jpg"
               />
             </article>
-            <article
-              class="profile-preview-card manual-grid-card grid-size-half has-photo"
-            >
+            <article class="profile-preview-card manual-grid-card grid-size-half has-photo">
               <div class="profile-preview-content">
                 <h4>Programming</h4>
-                <p>
-                  Skilled in desktop application development, database management, and
-                  building structured user interfaces using Visual Basic 6.0.
-                </p>
+                <p>Skilled in desktop application development, database management, and building structured user interfaces using Visual Basic 6.0.</p>
               </div>
               <img
                 alt="Photo related to Programming"
@@ -380,10 +445,7 @@
             <article class="profile-preview-card grid-auto-third has-photo">
               <div class="profile-preview-content">
                 <h4>Photo Editing</h4>
-                <p>
-                  Experienced in photo manipulation, graphic design, and color grading
-                  using Adobe Photoshop, Snapseed, and Canva.
-                </p>
+                <p>Experienced in photo manipulation, graphic design, and color grading using Adobe Photoshop, Snapseed, and Canva.</p>
               </div>
               <img
                 alt="Photo related to Photo Editing"
@@ -394,10 +456,7 @@
             <article class="profile-preview-card grid-auto-third has-photo">
               <div class="profile-preview-content">
                 <h4>Web Development</h4>
-                <p>
-                  Capable of designing responsive, dynamic, and interactive web layouts
-                  using HTML, CSS, and JavaScript.
-                </p>
+                <p>Capable of designing responsive, dynamic, and interactive web layouts using HTML, CSS, and JavaScript.</p>
               </div>
               <img
                 alt="Photo related to Web Development"
@@ -408,10 +467,7 @@
             <article class="profile-preview-card grid-auto-third has-photo">
               <div class="profile-preview-content">
                 <h4>Music Production</h4>
-                <p>
-                  Skilled in audio mixing, beat making, and sound composition using FL
-                  Studio.
-                </p>
+                <p>Skilled in audio mixing, beat making, and sound composition using FL Studio.</p>
               </div>
               <img
                 alt="Photo related to Music Production"
@@ -422,10 +478,7 @@
             <article class="profile-preview-card grid-auto-third has-photo">
               <div class="profile-preview-content">
                 <h4>Photography</h4>
-                <p>
-                  Experienced in capturing high-quality images, creative portraits, and
-                  aesthetic shots using DSLR and digital cameras.
-                </p>
+                <p>Experienced in capturing high-quality images, creative portraits, and aesthetic shots using DSLR and digital cameras.</p>
               </div>
               <img
                 alt="Photo related to Photography"
@@ -436,10 +489,7 @@
             <article class="profile-preview-card grid-auto-third has-photo">
               <div class="profile-preview-content">
                 <h4>Videography</h4>
-                <p>
-                  Skilled in filming smooth video footage, vlogs, and event coverage
-                  using handheld gimbals, mobile devices, and compact digital cameras.
-                </p>
+                <p>Skilled in filming smooth video footage, vlogs, and event coverage using handheld gimbals, mobile devices, and compact digital cameras.</p>
               </div>
               <img
                 alt="Photo related to Videography"
@@ -450,10 +500,7 @@
             <article class="profile-preview-card grid-auto-third has-photo">
               <div class="profile-preview-content">
                 <h4>Programming</h4>
-                <p>
-                  Proficient in foundational programming concepts, logic formulation,
-                  and algorithm design using C++.
-                </p>
+                <p>Proficient in foundational programming concepts, logic formulation, and algorithm design using C++.</p>
               </div>
               <img
                 alt="Photo related to Programming"
@@ -465,7 +512,10 @@
         </div>
         <!-- PROJECTS TAB -->
         <!-- PROJECTS -->
-        <div class="tab-content content-section" id="projects">
+        <div
+          class="tab-content content-section"
+          id="projects"
+        >
           <h3>My Projects</h3>
           <div
             class="profile-details-grid grid-three-plus"
@@ -475,43 +525,36 @@
               <div class="profile-preview-content">
                 <h4>LifeNotes.exe</h4>
                 <details>
-                  <summary>
-                    LifeNotes is a comprehensive personal desktop productivity
-                    application developed using Visual Basic 6.0 and stored locally on
-                    the desktop, featuring a… (Read more)
-                  </summary>
+                  <summary>Project details</summary>
 
                   <p>
-                    LifeNotes is a comprehensive personal desktop productivity
-                    application developed using Visual Basic 6.0 and stored locally on
-                    the desktop, featuring a Microsoft Access database (aldrin.mdb)
-                    connected via OLEDB to efficiently manage and store user data.
+                    LifeNotes is a comprehensive personal desktop productivity application developed
+                    using Visual Basic 6.0 and stored locally on the desktop, featuring a Microsoft
+                    Access database (aldrin.mdb) connected via OLEDB to efficiently manage and store
+                    user data.
                   </p>
                   <p>
-                    The application incorporates a robust security and navigation
-                    structure, beginning with a secure login interface (frmlogin.frm)
-                    for user authentication, an auxiliary privacy PIN lock module
-                    (frmpin.frm) to safeguard sensitive personal entries, and a
-                    centralized main dashboard (frmmaindashboard.frm) that serves as the
-                    primary hub for navigating through the system's various features.
+                    The application incorporates a robust security and navigation structure,
+                    beginning with a secure login interface (frmlogin.frm) for user authentication,
+                    an auxiliary privacy PIN lock module (frmpin.frm) to safeguard sensitive
+                    personal entries, and a centralized main dashboard (frmmaindashboard.frm) that
+                    serves as the primary hub for navigating through the system's various features.
                   </p>
                   <p>
-                    Furthermore, it integrates dedicated core modules tailored for
-                    personal growth and organization, including a notes manager
-                    (frmnotes.frm) for recording and categorizing thoughts, a daily
-                    journaling section (frmjournal.frm) for documenting daily life
-                    experiences and personal stories, and a spiritual devotions module
-                    (frmdevotions.frm) dedicated to Bible verses, reflections, and quiet
-                    time notes.
+                    Furthermore, it integrates dedicated core modules tailored for personal growth
+                    and organization, including a notes manager (frmnotes.frm) for recording and
+                    categorizing thoughts, a daily journaling section (frmjournal.frm) for
+                    documenting daily life experiences and personal stories, and a spiritual
+                    devotions module (frmdevotions.frm) dedicated to Bible verses, reflections, and
+                    quiet time notes.
                   </p>
                   <p>
-                    The system is rounded out by comprehensive settings and information
-                    pages (frmsettings.frm and frmabout.frm) for application
-                    customization and developer credits. Because the entire project is
-                    built on the legacy Visual Basic 6.0 framework, it natively operates
-                    within a 32-bit (x86) architecture environment, which inherently
-                    explains why it requires x86-compatible database drivers and ActiveX
-                    components to function smoothly compared to 64-bit systems.
+                    The system is rounded out by comprehensive settings and information pages
+                    (frmsettings.frm and frmabout.frm) for application customization and developer
+                    credits. Because the entire project is built on the legacy Visual Basic 6.0
+                    framework, it natively operates within a 32-bit (x86) architecture environment,
+                    which inherently explains why it requires x86-compatible database drivers and
+                    ActiveX components to function smoothly compared to 64-bit systems.
                   </p>
                 </details>
                 <p><strong>Technologies: </strong>Visual Basic 6.0</p>
@@ -526,65 +569,54 @@
               <div class="profile-preview-content">
                 <h4>MindSpace.html</h4>
                 <details>
-                  <summary>
-                    MindSpace (v2.60 BETA) is a complete, standalone, and feature-rich
-                    web application that serves as a personal workspace, reviewer, code
-                    notebook, and study feed… (Read more)
-                  </summary>
+                  <summary>Project details</summary>
 
                   <p>
-                    MindSpace (v2.60 BETA) is a complete, standalone, and feature-rich
-                    web application that serves as a personal workspace, reviewer, code
-                    notebook, and study feed packaged into a single HTML file containing
-                    CSS, JavaScript, and required libraries such as html2canvas and
-                    highlight.js.
+                    MindSpace (v2.60 BETA) is a complete, standalone, and feature-rich web
+                    application that serves as a personal workspace, reviewer, code notebook, and
+                    study feed packaged into a single HTML file containing CSS, JavaScript, and
+                    required libraries such as html2canvas and highlight.js.
                   </p>
                   <p>
-                    It includes meta tags for mobile responsive design,
-                    viewport-fit=cover support for modern screen notches, and color
-                    themes. It utilizes IndexedDB (MindSpaceMediaDB) for large media
-                    files like profile pictures, banners, and audio tracks to prevent
-                    localStorage limitations, along with mechanisms for GPU acceleration
-                    and a performance mode.
+                    It includes meta tags for mobile responsive design, viewport-fit=cover support
+                    for modern screen notches, and color themes. It utilizes IndexedDB
+                    (MindSpaceMediaDB) for large media files like profile pictures, banners, and
+                    audio tracks to prevent localStorage limitations, along with mechanisms for GPU
+                    acceleration and a performance mode.
                   </p>
                   <p>
-                    It also supports Light Mode, Dark Mode (Monochrome), and a Liquid
-                    Glass Theme.
+                    It also supports Light Mode, Dark Mode (Monochrome), and a Liquid Glass Theme.
                   </p>
                   <p>
-                    The application features a YouTube-style loading screen with a top
-                    loading bar and loading animation, as well as a First-Time Tutorial
-                    and Spotlight system using a floating guide card to guide new users.
+                    The application features a YouTube-style loading screen with a top loading bar
+                    and loading animation, as well as a First-Time Tutorial and Spotlight system
+                    using a floating guide card to guide new users.
                   </p>
                   <p>
-                    In terms of UI, it highlights a customizable banner and profile
-                    picture with a story ring for the Journal/My Day feature, alongside
-                    a side media toolbar for switching images, exporting/importing data,
-                    and opening the source code.
+                    In terms of UI, it highlights a customizable banner and profile picture with a
+                    story ring for the Journal/My Day feature, alongside a side media toolbar for
+                    switching images, exporting/importing data, and opening the source code.
                   </p>
                   <p>
-                    Its tabs house a Study Feed for questions and reviewers, floating
-                    Sticky Notes in yellow, blue, and green designs, and a Live Accuracy
-                    Score serving as a scroll progress meter. It also includes a Code
-                    Notepad &amp; Line-by-Line Memorize Trainer for code memorization
-                    with real-time validation, a Reviewer Image Gallery with zoom and
-                    cropping tools, and a Bible Books / Chapter Reader with a carousel
-                    view.
+                    Its tabs house a Study Feed for questions and reviewers, floating Sticky Notes
+                    in yellow, blue, and green designs, and a Live Accuracy Score serving as a
+                    scroll progress meter. It also includes a Code Notepad &amp; Line-by-Line
+                    Memorize Trainer for code memorization with real-time validation, a Reviewer
+                    Image Gallery with zoom and cropping tools, and a Bible Books / Chapter Reader
+                    with a carousel view.
                   </p>
                   <p>
-                    For recreation, it contains Break Time Games like Glow Snake, Pixel
-                    Tetris, Memory Card Match, and Tic-Tac-Toe, alongside BSIT Games
-                    such as interactive quizzes and word shuffle. It features a Recap
-                    Journal / My Day system with an animated typing effect and the
-                    ability to capture PNG screenshots using html2canvas, plus a
-                    Community Lounge feed for wellness quotes, likes, and liked post
-                    history.
+                    For recreation, it contains Break Time Games like Glow Snake, Pixel Tetris,
+                    Memory Card Match, and Tic-Tac-Toe, alongside BSIT Games such as interactive
+                    quizzes and word shuffle. It features a Recap Journal / My Day system with an
+                    animated typing effect and the ability to capture PNG screenshots using
+                    html2canvas, plus a Community Lounge feed for wellness quotes, likes, and liked
+                    post history.
                   </p>
                   <p>
-                    Lastly, it incorporates a Developer Console for performance metrics
-                    and error logs, as well as a Full MindSpace Code Viewer that
-                    displays the complete source code with syntax highlighting and line
-                    numbers.
+                    Lastly, it incorporates a Developer Console for performance metrics and error
+                    logs, as well as a Full MindSpace Code Viewer that displays the complete source
+                    code with syntax highlighting and line numbers.
                   </p>
                 </details>
                 <p><strong>Technologies: </strong>HTML, CSS and JavaScript</p>
@@ -599,25 +631,20 @@
               <div class="profile-preview-content">
                 <h4>FILM Production Equipment Tracker SYSTEM</h4>
                 <details>
-                  <summary>
-                    Film Production Equipment Tracker System is a Python-based CLI
-                    application developed to manage and organize film equipment
-                    inventory. It supports complete CRUD… (Read more)
-                  </summary>
+                  <summary>Project details</summary>
 
                   <p>
-                    Film Production Equipment Tracker System is a Python-based CLI
-                    application developed to manage and organize film equipment
-                    inventory.
+                    Film Production Equipment Tracker System is a Python-based CLI application
+                    developed to manage and organize film equipment inventory.
                   </p>
                   <p>
-                    It supports complete CRUD functionalities—allowing users to add,
-                    view, search, update, and delete equipment records based on
-                    categories like Camera, Audio, Lighting, and Props.
+                    It supports complete CRUD functionalities—allowing users to add, view, search,
+                    update, and delete equipment records based on categories like Camera, Audio,
+                    Lighting, and Props.
                   </p>
                   <p>
-                    Designed for media workflows, it tracks item statuses and assigned
-                    crew members to ensure seamless production operations.
+                    Designed for media workflows, it tracks item statuses and assigned crew members
+                    to ensure seamless production operations.
                   </p>
                 </details>
                 <p><strong>Technologies: </strong>Python</p>
@@ -632,22 +659,19 @@
         </div>
         <!-- ACHIEVEMENTS TAB -->
         <!-- ACHIEVEMENTS -->
-        <div class="tab-content content-section" id="achievements">
+        <div
+          class="tab-content content-section"
+          id="achievements"
+        >
           <h3>Achievements</h3>
           <div
             class="profile-details-grid grid-three-plus"
             id="profilePreview-achievements"
           >
-            <article
-              class="profile-preview-card manual-grid-card grid-size-half has-photo"
-            >
+            <article class="profile-preview-card manual-grid-card grid-size-half has-photo">
               <div class="profile-preview-content">
                 <h4>Integrative Programming – ORACLE [Prelim]</h4>
-                <p>
-                  Achieved Rank 3 with a Final Grade of 99.33 during the First Semester
-                  (Prelim), Academic Year 2026–2027 at Datamex College of Saint Adeline
-                  – Fairview Branch.
-                </p>
+                <p>Achieved Rank 3 with a Final Grade of 99.33 during the First Semester (Prelim), Academic Year 2026–2027 at Datamex College of Saint Adeline – Fairview Branch.</p>
               </div>
               <img
                 alt="Photo related to Integrative Programming – ORACLE [Prelim]"
@@ -655,15 +679,10 @@
                 src="images/photo-29.jpg"
               />
             </article>
-            <article
-              class="profile-preview-card manual-grid-card grid-size-half has-photo"
-            >
+            <article class="profile-preview-card manual-grid-card grid-size-half has-photo">
               <div class="profile-preview-content">
                 <h4>Fundamentals of Programming – C++</h4>
-                <p>
-                  Achieved Rank 6 with a Midterm Grade of 97.6 during the First Semester
-                  (Midterm), Academic Year 2026–2027.
-                </p>
+                <p>Achieved Rank 6 with a Midterm Grade of 97.6 during the First Semester (Midterm), Academic Year 2026–2027.</p>
               </div>
               <img
                 alt="Photo related to Fundamentals of Programming – C++"
@@ -671,15 +690,10 @@
                 src="images/photo-30.jpg"
               />
             </article>
-            <article
-              class="profile-preview-card manual-grid-card grid-size-half has-photo"
-            >
+            <article class="profile-preview-card manual-grid-card grid-size-half has-photo">
               <div class="profile-preview-content">
                 <h4>Integrative Programming – ORACLE [Midterm]</h4>
-                <p>
-                  Achieved Rank 9 with a Midterm Grade of 95.40 during the First
-                  Semester (Midterm), Academic Year 2026–2027.
-                </p>
+                <p>Achieved Rank 9 with a Midterm Grade of 95.40 during the First Semester (Midterm), Academic Year 2026–2027.</p>
               </div>
               <img
                 alt="Photo related to Integrative Programming – ORACLE [Midterm]"
@@ -687,15 +701,10 @@
                 src="images/photo-30.jpg"
               />
             </article>
-            <article
-              class="profile-preview-card manual-grid-card grid-size-half has-photo"
-            >
+            <article class="profile-preview-card manual-grid-card grid-size-half has-photo">
               <div class="profile-preview-content">
                 <h4>Fundamentals of Programming – C++</h4>
-                <p>
-                  Achieved Rank 3 with a Midterm Grade of 99.68 during the First
-                  Semester (Prefinal), Academic Year 2026–2027.
-                </p>
+                <p>Achieved Rank 3 with a Midterm Grade of 99.68 during the First Semester (Prefinal), Academic Year 2026–2027.</p>
               </div>
               <img
                 alt="Photo related to Fundamentals of Programming – C++"
@@ -707,16 +716,19 @@
         </div>
         <!-- FUTURE GOALS TAB -->
         <!-- FUTURE GOALS -->
-        <div class="tab-content content-section" id="goals">
+        <div
+          class="tab-content content-section"
+          id="goals"
+        >
           <h3>Future Goals</h3>
-          <div class="profile-details-grid grid-three-plus" id="profilePreview-goals">
+          <div
+            class="profile-details-grid grid-three-plus"
+            id="profilePreview-goals"
+          >
             <article class="profile-preview-card grid-auto-third has-photo">
               <div class="profile-preview-content">
                 <h4>Film Director &amp; Multimedia Artist</h4>
-                <p>
-                  Combine tech and creativity to direct, edit, and produce impactful
-                  short films, visual stories, and dynamic commercial video content.
-                </p>
+                <p>Combine tech and creativity to direct, edit, and produce impactful short films, visual stories, and dynamic commercial video content.</p>
               </div>
               <img
                 alt="Photo related to Film Director &amp; Multimedia Artist"
@@ -727,10 +739,7 @@
             <article class="profile-preview-card grid-auto-third has-photo">
               <div class="profile-preview-content">
                 <h4>Full-Stack Web &amp; Application Developer</h4>
-                <p>
-                  Master full-stack technologies to design interactive web workspaces,
-                  cloud-connected databases, and desktop applications.
-                </p>
+                <p>Master full-stack technologies to design interactive web workspaces, cloud-connected databases, and desktop applications.</p>
               </div>
               <img
                 alt="Photo related to Full-Stack Web &amp; Application Developer"
@@ -741,10 +750,7 @@
             <article class="profile-preview-card grid-auto-third has-photo">
               <div class="profile-preview-content">
                 <h4>Earn a Second Degree in Multimedia Arts (BMMA)</h4>
-                <p>
-                  Pursue a Bachelor of Multimedia Arts after graduating with BSIT to
-                  further bridge code, graphic design, animation, and filmmaking.
-                </p>
+                <p>Pursue a Bachelor of Multimedia Arts after graduating with BSIT to further bridge code, graphic design, animation, and filmmaking.</p>
               </div>
               <img
                 alt="Photo related to Earn a Second Degree in Multimedia Arts (BMMA)"
@@ -756,15 +762,16 @@
         </div>
         <!-- CONTACT TAB -->
         <!-- CONTACT -->
-        <div class="tab-content content-section active" id="contact">
+        <div
+          class="tab-content content-section active"
+          id="contact"
+        >
           <h3>Contact Me</h3>
           <div
             class="profile-details-grid grid-one-item contact-layout"
             id="profilePreview-contact"
           >
-            <article
-              class="profile-preview-card manual-grid-card grid-size-square has-photo"
-            >
+            <article class="profile-preview-card manual-grid-card grid-size-square has-photo">
               <div class="profile-preview-content">
                 <h4>Email</h4>
                 <p>datamex.aldrinyancha.kuyaoo@gmail.com</p>
@@ -803,7 +810,10 @@
         </div>
         <!-- STICKY NOTES MINI-APP -->
         <!-- STICKY NOTES -->
-        <div class="tab-content content-section" id="notes">
+        <div
+          class="tab-content content-section"
+          id="notes"
+        >
           <h3>Sticky Notes</h3>
           <p>Write a reminder or idea here.</p>
           <div class="app-form">
@@ -811,7 +821,12 @@
               id="noteInput"
               placeholder="Example: Finish the assignment"
               type="text"
-            /><button class="app-button" onclick="addNote()">Add Note</button>
+            /><button
+              class="app-button"
+              onclick="addNote()"
+            >
+              Add Note
+            </button>
           </div>
           <div id="notesList">
             <div class="simple-card">
@@ -833,15 +848,27 @@
         </div>
         <!-- JOURNAL MINI-APP -->
         <!-- JOURNAL -->
-        <div class="tab-content content-section" id="journal">
+        <div
+          class="tab-content content-section"
+          id="journal"
+        >
           <h3>Personal Journal / Diary</h3>
           <p>Write about a story or experience from your day.</p>
           <div class="app-form">
-            <input id="diaryTitle" placeholder="Entry title" type="text" /><textarea
+            <input
+              id="diaryTitle"
+              placeholder="Entry title"
+              type="text"
+            /><textarea
               id="diaryText"
               placeholder="What would you like to write?"
             ></textarea
-            ><button class="app-button" onclick="addDiaryEntry()">Save Entry</button>
+            ><button
+              class="app-button"
+              onclick="addDiaryEntry()"
+            >
+              Save Entry
+            </button>
           </div>
           <div id="diaryList">
             <div class="simple-card">
@@ -864,7 +891,10 @@
         </div>
         <!-- FLASHCARD REVIEWER MINI-APP -->
         <!-- REVIEWER -->
-        <div class="tab-content content-section" id="reviewer">
+        <div
+          class="tab-content content-section"
+          id="reviewer"
+        >
           <h3>Interactive Reviewer</h3>
           <p>Create simple flashcards to help you study.</p>
           <div class="app-form">
@@ -872,16 +902,42 @@
               id="questionInput"
               placeholder="Question or topic"
               type="text"
-            /><textarea id="answerInput" placeholder="Answer"></textarea
-            ><button class="app-button" onclick="addFlashcard()">Add Flashcard</button>
+            /><textarea
+              id="answerInput"
+              placeholder="Answer"
+            ></textarea
+            ><button
+              class="app-button"
+              onclick="addFlashcard()"
+            >
+              Add Flashcard
+            </button>
           </div>
           <div class="simple-card">
             <h4 id="cardQuestion">One plus one?</h4>
-            <div class="answer-box" id="cardAnswer" style="display: none">Two</div>
+            <div
+              class="answer-box"
+              id="cardAnswer"
+              style="display: none"
+            >
+              Two
+            </div>
             <p id="cardNumber">1 / 3</p>
-            <button class="small-button" onclick="showAnswer()">Show Answer</button
-            ><button class="small-button" onclick="previousCard()">Previous</button
-            ><button class="small-button" onclick="nextCard()">Next</button
+            <button
+              class="small-button"
+              onclick="showAnswer()"
+            >
+              Show Answer</button
+            ><button
+              class="small-button"
+              onclick="previousCard()"
+            >
+              Previous</button
+            ><button
+              class="small-button"
+              onclick="nextCard()"
+            >
+              Next</button
             ><button
               class="small-button danger-button"
               onclick="deleteCurrentFlashcard()"

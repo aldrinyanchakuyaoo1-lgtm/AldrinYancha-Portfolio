@@ -162,6 +162,8 @@ h3 {
 .scroll-container {
   flex-grow: 1;
   overflow-y: auto;
+  overflow-anchor: none;
+  overscroll-behavior: contain;
   padding: 20px 30px 30px;
 }
 .tab-content {
@@ -915,7 +917,25 @@ body.dark-mode .danger-button:hover {
   margin-top: 18px;
 }
 
+.project-card details > summary {
+  cursor: pointer;
+  font-weight: 600;
+}
+.project-card details > summary::after {
+  content: " (Read more)";
+  font-weight: 500;
+}
+.project-card details[open] > summary::after {
+  content: " (Read less)";
+}
+
 /* Let expanded project descriptions wrap naturally. */
 .project-card details p {
   white-space: normal;
+}
+
+/* Used briefly by script.js to measure the header without animating it. */
+.header-container.no-transition,
+.header-container.no-transition * {
+  transition: none !important;
 }
